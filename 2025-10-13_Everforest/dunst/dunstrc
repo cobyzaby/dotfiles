@@ -1,0 +1,42 @@
+[global]
+    width = 400
+    offset = 3x35
+    
+    progress_bar_min_width = 380
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 2
+
+    padding = 10
+    horizontal_padding = 15
+    frame_width = 2
+    gap_size = 3
+    font = "JetBrainsMono Nerd Font 12"
+
+;	icon_theme = "Papirus"
+;	enable_recursive_icon_lookup = true
+		icon_position = left
+    corner_radius = 9
+		max_icon_size = 64
+    show_indicators = false
+
+    background = "#2D353B"
+    foreground = "#D3C6AA"
+
+[urgency_low]
+    background = "#2E383C"
+    highlight = "#374145"
+    frame_color = "#374145"
+    format = "<b><span foreground='#9DA9A0'>%s</span></b>\n%b"
+
+[urgency_normal]
+    background = "#384B55"
+    highlight = "#7FBBB3"
+    frame_color = "#7FBBB3"
+    format = "<b><span foreground='#7FBBB3'>%s</span></b>\n%b"
+
+[urgency_critical]
+    background = "#4C3743"
+    highlight = "#E67E80"
+    frame_color = "#E67E80"
+    format = "<b><span foreground='#E67E80'>%s</span></b>\n%b"
+
