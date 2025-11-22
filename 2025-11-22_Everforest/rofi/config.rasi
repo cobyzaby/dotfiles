@@ -1,0 +1,171 @@
+
+
+configuration {
+	modes: [ drun, run, combi ];
+	combi-modes: [ window, drun, run ];
+	show-icons: true;
+}
+
+
+// THEMING ====================================
+
+// @theme "default"
+
+* {
+	foreground: #D3C6AA;
+	red: #E67E80;
+	orange: #E69875;
+	yellow: #DBBC7F;
+	green: #A7C080;
+	blue: #7FBBB3;
+	aqua: #83C092;
+	purple: #D699B6;
+	
+	bg-0: #272E33;
+	bg-1: #2E383C;
+	bg-2: #374145;
+	bg-3: #414B50;
+	bg-4: #495156;
+	bg-5: #4F5B58;
+	
+	bg-red: #4C3743;
+	bg-vis: #493B40;
+	bg-green: #3C4841;
+
+	gray-0: #7A8478;
+	gray-1: #859289;
+	gray-2: #9DA9A0;
+}
+
+window {
+	font: "JetBrainsMono Nerd Font 15";
+	background-color: @bg-1;
+
+	border-radius: 0;
+	border: 2;
+	border-color: @green;
+
+	padding: 0;
+	width: 500px;
+}
+
+mainbox {
+	padding: 0;
+	margin: 0;
+}
+
+// INPUTBAR -----------------------------------
+
+inputbar {
+	padding: 5 15;
+	margin: 0;
+
+	children: [textbox-prompt, entry];
+	spacing: 5;
+
+	border: 0;
+	
+	text-color: @gray-2;
+	background-color: @bg-4;
+}
+
+textbox-prompt {
+	color: @green;
+	content: "Open:";
+
+	vertical-align: 0.5;
+	horizontal-align: 1;
+
+	expand: false;
+}
+
+entry {
+	placeholder: "App name";
+	color: @green;
+
+	margin: 0;
+	padding: 5;
+
+	border: 2;
+	border-color: @bg-4;
+	border-radius: 5;
+
+	expand: true;
+}
+
+
+// LIST VIEW ----------------------------------
+
+listview {
+	border: 0;
+	border-radius: 0;
+
+	text-color: @foreground;
+	scrollbar: false;
+
+	spacing: 0;
+	margin: 10;
+	padding: 0;
+	columns: 1;
+
+	fixed-height: true;
+	lines: 10;
+}
+
+element { 
+	orientation: horizontal; 
+	border-radius: 0px;	
+	padding: 3px 10px;
+}
+
+element-icon {
+	size: 24px;
+	enabled: true;
+	margin: 0 5;
+	horizontal-align: 0.5;
+}
+
+element-text {
+	vertical-align: 0.5;
+	horizontal-align: 0;
+	text-color: inherit;
+	background-color: inherit;
+}
+
+element.normal.normal {
+    background-color: @bg-2;
+    text-color:       @foreground;
+}
+element.normal.urgent {
+    background-color: @bg-red;
+    text-color:       @red;
+}
+element.normal.active {
+    background-color: @bg-vis;
+    text-color:       @orange;
+}
+element.selected.normal {
+    background-color: @bg-green;
+    text-color:       @green;
+}
+element.selected.urgent {
+    background-color: @red;
+    text-color:       @bg-1;
+}
+element.selected.active {
+    background-color: @bg-green;
+    text-color:       @orange;
+}
+element.alternate.normal {
+    background-color: @bg-3;
+    text-color:       @foreground;
+}
+element.alternate.urgent {
+    background-color: @bg-red;
+    text-color:       @red;
+}
+element.alternate.active {
+    background-color: @bg-vis;
+    text-color:       @orange;
+}
+
